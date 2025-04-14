@@ -236,7 +236,7 @@ def get_base(thing, **kwargs):
         p3["shape"] = f"oobb_cube"
         wid = 30
         hei = 45
-        dep = 6
+        dep = 4
         size = [wid, hei, dep]
         p3["size"] = size
         p3["m"] = "#"
