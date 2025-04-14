@@ -227,7 +227,7 @@ def get_base(thing, **kwargs):
         poss.append(pos15)
         poss.append(pos16)
         p3["pos"] = poss
-        oobb_base.append_full(thing,**p3)
+        #oobb_base.append_full(thing,**p3)
 
     #add nut clearance
     if True:
