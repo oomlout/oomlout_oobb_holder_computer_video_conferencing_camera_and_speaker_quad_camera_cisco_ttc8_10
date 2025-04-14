@@ -120,10 +120,10 @@ def make_scad(**kwargs):
         
         part = copy.deepcopy(part_default)
         p3 = copy.deepcopy(kwargs)
-        p3["width"] = 3
+        p3["width"] = 4
         p3["height"] = 3
-        #p3["thickness"] = 6
-        #p3["extra"] = ""
+        p3["thickness"] = 15
+        p3["extra"] = ""
         part["kwargs"] = p3
         nam = "base"
         part["name"] = nam
@@ -131,7 +131,7 @@ def make_scad(**kwargs):
             p3["oomp_size"] = nam
         if not test:
             pass
-            #parts.append(part)
+            parts.append(part)
 
 
     kwargs["parts"] = parts
@@ -177,11 +177,107 @@ def get_base(thing, **kwargs):
     p3["shape"] = f"oobb_holes"
     p3["both_holes"] = True  
     p3["depth"] = depth
-    p3["holes"] = "perimeter"
+    p3["holes"] = "single"
+    locations = []
+    locations.append([3, 1])
+    locations.append([3, 2])
+    locations.append([3, 3])
+    locations.append([4, 1])
+    locations.append([4, 2])
+    locations.append([4, 3])
+    p3["locations"] = locations
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
     p3["pos"] = pos1
     oobb_base.append_full(thing,**p3)
+
+    #add bolts
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_nut"
+        p3["radius_name"] = "m6"
+        p3["hole"] = True
+        p3["holes"] = "single"
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 7.5
+        pos1[1] += -15
+        pos11 = copy.deepcopy(pos1)
+        pos12 = copy.deepcopy(pos1)
+        pos12[1] += 15
+        pos13 = copy.deepcopy(pos1)
+        pos13[1] += 30
+        pos14 = copy.deepcopy(pos1)
+        pos14[0] += 15
+        pos14[1] += 0
+        pos15 = copy.deepcopy(pos1)
+        pos15[0] += 15
+        pos15[1] += 15
+        pos16 = copy.deepcopy(pos1) 
+        pos16[0] += 15
+        pos16[1] += 30
+
+
+        poss = []
+        poss.append(pos11)
+        poss.append(pos12)
+        poss.append(pos13)
+        poss.append(pos14)
+        poss.append(pos15)
+        poss.append(pos16)
+        p3["pos"] = poss
+        oobb_base.append_full(thing,**p3)
+
+    #add nut clearance
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_cube"
+        wid = 30
+        hei = 45
+        dep = 6
+        size = [wid, hei, dep]
+        p3["size"] = size
+        p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 15
+        pos1[1] += 0
+        pos1[2] += 0
+        p3["pos"] = pos1
+        oobb_base.append_full(thing,**p3)
+
+    #add holes for 2_5 mm
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_screw_countersunk"
+        p3["radius_name"] = "m2_5"
+        p3["nut"] = True
+        p3["m"] = "#"
+        shift = 3
+        dep = depth + shift
+        p3["depth"] = dep
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += -14.5
+        pos1[2] += -shift
+        poss = []
+        pos11 = copy.deepcopy(pos1)
+        poss.append(pos11)
+        pos12 = copy.deepcopy(pos1)
+        pos12[1] += 10
+        poss.append(pos12)
+        pos13 = copy.deepcopy(pos1)
+        pos13[1] += -10
+        poss.append(pos13)
+        p3["pos"] = poss
+        rot1 = copy.deepcopy(rot)
+        rot1[1] += 180
+        p3["rot"] = rot1
+        oobb_base.append_full(thing,**p3)
+
+
+
 
     if prepare_print:
         #put into a rotation object
