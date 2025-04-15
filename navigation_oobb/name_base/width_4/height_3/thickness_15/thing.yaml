@@ -3002,6 +3002,34 @@ thing:
       - 0
       type: rotation
       typetype: n
+  - - - extra: ''
+        height: 3
+        m: '#'
+        pos:
+        - 2.5
+        - -22.0
+        - 0
+        shape: cube
+        size:
+        - 3
+        - 3
+        - 15
+        type: negative
+        width: 4
+  - - - extra: ''
+        height: 3
+        m: '#'
+        pos:
+        - 2.5
+        - 19.0
+        - 0
+        shape: cube
+        size:
+        - 3
+        - 3
+        - 15
+        type: negative
+        width: 4
   components_objects:
   - depth: 15
     extra: ''
@@ -3211,6 +3239,70 @@ thing:
     typ: all
     type: n
     width: 4
+  - extra: ''
+    filter: ''
+    height: 3
+    m: '#'
+    modes:
+    - 3dpr
+    navigation: true
+    oomp_classification: project
+    oomp_color: oomlout_oobb_holder_computer_video_confe
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 4
+    - -20.5
+    - 0
+    save_type: all
+    shape: oobb_cube
+    size:
+    - 3
+    - 3
+    - 15
+    thickness: 15
+    typ: all
+    type: n
+    width: 4
+  - extra: ''
+    filter: ''
+    height: 3
+    m: '#'
+    modes:
+    - 3dpr
+    navigation: true
+    oomp_classification: project
+    oomp_color: oomlout_oobb_holder_computer_video_confe
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 4
+    - 20.5
+    - 0
+    save_type: all
+    shape: oobb_cube
+    size:
+    - 3
+    - 3
+    - 15
+    thickness: 15
+    typ: all
+    type: n
+    width: 4
   components_string:
   - oobb_plate_shape_positive_type_15_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_4_width_3_height_15_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_computer_video_confe_oomp_color
   - oobb_holes_shape_p_type_15_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_4_width_3_height_15_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_computer_video_confe_oomp_color_true_both_holes_single_holes_3_1_3_2_3_3_4_1_4_2_4_3_locations
@@ -3218,6 +3310,8 @@ thing:
   - oobb_screw_countersunk_shape_n_type_m2_5_radius_name_18_depth_-14.5_0_-3_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_4_width_3_height_15_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_computer_video_confe_oomp_color_true_nut_0_180_0_rot
   - oobb_screw_countersunk_shape_n_type_m2_5_radius_name_18_depth_-14.5_10_-3_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_4_width_3_height_15_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_computer_video_confe_oomp_color_true_nut_0_180_0_rot
   - oobb_screw_countersunk_shape_n_type_m2_5_radius_name_18_depth_-14.5_-10_-3_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_4_width_3_height_15_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_computer_video_confe_oomp_color_true_nut_0_180_0_rot
+  - oobb_cube_shape_n_type_4_-20.5_0_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_4_width_3_height_15_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_computer_video_confe_oomp_color_3_3_15_size
+  - oobb_cube_shape_n_type_4_20.5_0_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_4_width_3_height_15_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_holder_computer_video_confe_oomp_color_3_3_15_size
   description: oomlout oobb holder computer video confe base 4x3x15
   description_extra: ''
   description_main: 4_width_3_height_15_mm_depth

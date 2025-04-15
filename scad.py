@@ -277,6 +277,30 @@ def get_base(thing, **kwargs):
         oobb_base.append_full(thing,**p3)
 
 
+    #add 3x3xdepth cube for bracket slearnce at x4,20.5 and x4,-20.5
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_cube"
+        wid = 3
+        hei = 3
+        dep = depth
+        size = [wid, hei, dep]
+        p3["size"] = size
+        p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 4
+        pos1[1] += 0
+        pos1[2] += 0
+        poss = []
+        pos11 = copy.deepcopy(pos1)
+        pos11[1] += -20.5
+        poss.append(pos11)        
+        pos12 = copy.deepcopy(pos1)
+        pos12[1] += 20.5
+        poss.append(pos12)
+        p3["pos"] = poss
+        oobb_base.append_full(thing,**p3)
 
 
     if prepare_print:
